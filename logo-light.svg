@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120" fill="none">
+  <defs>
+    <!-- Ultra-Luxe Champagne & 24K Gold for Dark Backgrounds -->
+    <linearGradient id="lightLuxeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0C2"/>
+      <stop offset="35%" stop-color="#E8CE7A"/>
+      <stop offset="70%" stop-color="#C5A04D"/>
+      <stop offset="100%" stop-color="#9E7B32"/>
+    </linearGradient>
+
+    <linearGradient id="lightLuxeShine" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF9E0"/>
+      <stop offset="50%" stop-color="#EED588"/>
+      <stop offset="100%" stop-color="#FFF3C7"/>
+    </linearGradient>
+
+    <!-- Deep Obsidian Medallion Base (Zero Green) -->
+    <radialGradient id="lightNoirBg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#24211D"/>
+      <stop offset="75%" stop-color="#141311"/>
+      <stop offset="100%" stop-color="#090807"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Left: Crest Medallion on dark background -->
+  <g transform="translate(10, 10)">
+    <circle cx="50" cy="50" r="48" fill="url(#lightNoirBg)" stroke="url(#lightLuxeGold)" stroke-width="2.2"/>
+    <circle cx="50" cy="50" r="44" fill="none" stroke="url(#lightLuxeGold)" stroke-width="0.8" stroke-opacity="0.8"/>
+    <circle cx="50" cy="50" r="41.5" fill="none" stroke="url(#lightLuxeGold)" stroke-width="0.5" stroke-dasharray="1.5 2" stroke-opacity="0.6"/>
+
+    <!-- Apex Star of Excellence -->
+    <path d="M50 16 L51.5 20.5 L56 22 L51.5 23.5 L50 28 L48.5 23.5 L44 22 L48.5 20.5 Z" fill="url(#lightLuxeShine)"/>
+
+    <!-- 'M' Architectural Form in Pure Radiant White/Ivory -->
+    <path d="M28 68 V35 L50 56 L72 35 V68" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.5 35 H31.5 M68.5 35 H75.5" stroke="url(#lightLuxeGold)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 68 H32 M68 68 H76" stroke="url(#lightLuxeGold)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- 'S' Culinary Calligraphy in 24K Gold -->
+    <path d="M62 39 C55 33 44 34 40.5 42 C37 50 47.5 53.5 54 57 C61.5 61 64 66 59.5 72 C54.5 78.5 41 78 33.5 71.5" 
+          stroke="#141311" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+    <path d="M62 39 C55 33 44 34 40.5 42 C37 50 47.5 53.5 54 57 C61.5 61 64 66 59.5 72 C54.5 78.5 41 78 33.5 71.5" 
+          stroke="url(#lightLuxeShine)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <circle cx="62" cy="39" r="1.6" fill="url(#lightLuxeGold)"/>
+    <circle cx="33.5" cy="71.5" r="1.6" fill="url(#lightLuxeGold)"/>
+
+    <!-- Laurel Sprig Base -->
+    <path d="M36 76 C42 82 48 84 50 84 C52 84 58 82 64 76" stroke="url(#lightLuxeGold)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+    <circle cx="50" cy="84" r="1.5" fill="url(#lightLuxeShine)"/>
+  </g>
+
+  <!-- Right: Sophisticated Brand Typography for Dark Backgrounds -->
+  <g transform="translate(132, 22)">
+    <!-- Primary Name: MAISON DES SAVEURS in noble serif tracking in white/ivory -->
+    <text x="0" y="38" 
+          font-family="'Playfair Display', Georgia, serif" 
+          font-size="30" 
+          font-weight="700" 
+          letter-spacing="4" 
+          fill="#FFFFFF">
+      MAISON DES SAVEURS
+    </text>
+
+    <!-- Refined Gold Divider with Central Diamond -->
+    <line x1="0" y1="52" x2="368" y2="52" stroke="url(#lightLuxeGold)" stroke-width="1.2" stroke-opacity="0.85"/>
+    <polygon points="184,49 187.5,52 184,55 180.5,52" fill="url(#lightLuxeShine)"/>
+
+    <!-- Subtitle: TRAITEUR & ÉVÉNEMENTIEL • CASABLANCA -->
+    <text x="0" y="69" 
+          font-family="'Inter', -apple-system, sans-serif" 
+          font-size="11" 
+          font-weight="600" 
+          letter-spacing="4.5" 
+          fill="#E5C56E">
+      TRAITEUR &amp; ÉVÉNEMENTIEL
+    </text>
+    <text x="290" y="69" 
+          font-family="'Inter', -apple-system, sans-serif" 
+          font-size="10.5" 
+          font-weight="500" 
+          letter-spacing="3" 
+          fill="#FAF8F3" 
+          fill-opacity="0.85">
+      · CASABLANCA
+    </text>
+  </g>
+</svg>

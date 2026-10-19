@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" fill="none">
+  <defs>
+    <!-- Ultra-Luxe 24K Gold Gradient -->
+    <linearGradient id="luxeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF0C9"/>
+      <stop offset="25%" stop-color="#E5C56E"/>
+      <stop offset="50%" stop-color="#C5A04D"/>
+      <stop offset="75%" stop-color="#A57F32"/>
+      <stop offset="100%" stop-color="#7B5B1B"/>
+    </linearGradient>
+
+    <!-- Radiant Highlights for Jewels & Curves -->
+    <linearGradient id="luxeShine" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8DC"/>
+      <stop offset="45%" stop-color="#E8CE7A"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#FFF2BF"/>
+    </linearGradient>
+
+    <!-- Rich Obsidian Noir Medallion Background (Zero Green) -->
+    <radialGradient id="luxeNoir" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#24211D"/>
+      <stop offset="65%" stop-color="#141311"/>
+      <stop offset="100%" stop-color="#0A0908"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Luxury Obsidian Medallion Base -->
+  <circle cx="120" cy="120" r="114" fill="url(#luxeNoir)" stroke="url(#luxeGold)" stroke-width="3.2"/>
+  
+  <!-- Concentric Fine Jewelry Filigree Rings -->
+  <circle cx="120" cy="120" r="105" fill="none" stroke="url(#luxeGold)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <circle cx="120" cy="120" r="99" fill="none" stroke="url(#luxeGold)" stroke-width="0.8" stroke-dasharray="2.5 3" stroke-opacity="0.55"/>
+
+  <!-- 4 Cardinal Faceted Diamonds (Top, Bottom, Left, Right) -->
+  <path d="M120 7 L123 13 L120 19 L117 13 Z" fill="url(#luxeShine)"/>
+  <path d="M120 221 L123 227 L120 233 L117 227 Z" fill="url(#luxeShine)"/>
+  <path d="M7 120 L13 123 L19 120 L13 117 Z" fill="url(#luxeShine)"/>
+  <path d="M221 120 L227 123 L233 120 L227 117 Z" fill="url(#luxeShine)"/>
+
+  <!-- Apex Royal 8-Pointed Star of Gastronomic Excellence -->
+  <g transform="translate(120, 42)">
+    <path d="M0 -13 L3 -3.5 L13 0 L3 3.5 L0 13 L-3 3.5 L-13 0 L-3 -3.5 Z" fill="url(#luxeShine)"/>
+    <circle cx="0" cy="0" r="2.2" fill="#141311"/>
+    <circle cx="0" cy="0" r="1.1" fill="url(#luxeShine)"/>
+  </g>
+
+  <!-- Central Crest Monogram: Intertwined 'M' & 'S' in Ivory & 24K Gold -->
+  <!-- 'M' of Maison: Architectural Noble Pillars & Vaulted Arches -->
+  <g id="monogram-M">
+    <!-- Main Architectural Frame in Polished Ivory -->
+    <path d="M68 162 V84 L120 134 L172 84 V162" stroke="#FAF8F3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Top Crown Capitals in Polished Gold -->
+    <path d="M60 84 H76 M164 84 H180" stroke="url(#luxeGold)" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Classical Serif Base Pedestals in Polished Gold -->
+    <path d="M57 162 H79 M161 162 H183" stroke="url(#luxeGold)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- 'S' of Saveurs: Flowing Culinary Artistry in Radiant Gold -->
+  <g id="monogram-S">
+    <!-- Depth shadow in rich noir matching medallion (No green) -->
+    <path d="M148 94 C132 80 106 82 98 100 C90 118 114 126 130 134 C148 143 154 154 144 168 C132 184 100 182 82 168" 
+          stroke="#141311" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <!-- Main Radiant 24K Gold 'S' Ribbon -->
+    <path d="M148 94 C132 80 106 82 98 100 C90 118 114 126 130 134 C148 143 154 154 144 168 C132 184 100 182 82 168" 
+          stroke="url(#luxeShine)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+    <!-- Polished Gem Finials on 'S' terminals -->
+    <circle cx="148" cy="94" r="3.8" fill="url(#luxeGold)"/>
+    <circle cx="82" cy="168" r="3.8" fill="url(#luxeGold)"/>
+  </g>
+
+  <!-- Lower Culinary Laurel Wreath of Prestige -->
+  <g stroke="url(#luxeGold)" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <!-- Left Laurel Branch -->
+    <path d="M72 178 C84 192 100 199 116 200"/>
+    <path d="M82 182 C81 176 84 172 88 174 C89 177 87 181 82 182 Z" fill="url(#luxeGold)"/>
+    <path d="M96 190 C96 184 100 181 103 184 C104 187 101 190 96 190 Z" fill="url(#luxeGold)"/>
+    <path d="M109 196 C110 190 114 188 117 191 C117 194 114 197 109 196 Z" fill="url(#luxeGold)"/>
+
+    <!-- Right Laurel Branch -->
+    <path d="M168 178 C156 192 140 199 124 200"/>
+    <path d="M158 182 C159 176 156 172 152 174 C151 177 153 181 158 182 Z" fill="url(#luxeGold)"/>
+    <path d="M144 190 C144 184 140 181 137 184 C136 187 139 190 144 190 Z" fill="url(#luxeGold)"/>
+    <path d="M131 196 C130 190 126 188 123 191 C123 194 126 197 131 196 Z" fill="url(#luxeGold)"/>
+  </g>
+
+  <!-- Central Harmony Jewel at Base -->
+  <circle cx="120" cy="200" r="3.2" fill="url(#luxeShine)"/>
+</svg>
