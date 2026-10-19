@@ -27,10 +27,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./logo.svg" />
 
-  <!-- Google Fonts: Inter & Playfair Display -->
+  <!-- Google Fonts: Jost, Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -53,6 +53,7 @@
           fontFamily: {
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
             sans: ['Inter', 'sans-serif'],
+            jost: ['"Jost"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           }
         }
       }
@@ -88,157 +89,473 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    /* ===================================================
+       LUXURY NIGHT MODE / DARK AMBIANCE STYLES
+       =================================================== */
+    body.night-mode {
+      background-color: #0b110e !important;
+      color: #e6e2d8 !important;
+    }
+
+    /* Navbar & Services Dropdown */
+    body.night-mode #main-nav {
+      background-color: #0f1613 !important;
+      border-bottom-color: rgba(203, 166, 75, 0.35) !important;
+    }
+    body.night-mode .nav-link-item {
+      color: #d8d4c9 !important;
+    }
+    body.night-mode .nav-link-item:hover,
+    body.night-mode .nav-link-item.text-\[\#CBA64B\] {
+      color: #cba64b !important;
+    }
+    body.night-mode #navServicesDropdown > div {
+      background-color: #0f1613 !important;
+      border-color: rgba(203, 166, 75, 0.35) !important;
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.7) !important;
+    }
+    body.night-mode #navServicesDropdown a {
+      color: #d8d4c9 !important;
+    }
+    body.night-mode #navServicesDropdown a:hover {
+      color: #cba64b !important;
+      background-color: #17211c !important;
+    }
+
+    /* Mobile Drawer */
+    body.night-mode #mobileMenu {
+      background-color: #0f1613 !important;
+      border-bottom-color: rgba(203, 166, 75, 0.35) !important;
+    }
+    body.night-mode #mobileMenu a,
+    body.night-mode #mobileMenu span,
+    body.night-mode #mobileMenu div {
+      color: #d8d4c9 !important;
+    }
+    body.night-mode #mobileMenu a:hover {
+      color: #cba64b !important;
+    }
+
+    /* Header Icons & Toggle Buttons */
+    body.night-mode #themeToggleBtn,
+    body.night-mode #mobileThemeToggleBtn {
+      color: #cba64b !important;
+    }
+    body.night-mode #themeMoonIcon,
+    body.night-mode [data-lucide="moon"] {
+      color: #cba64b !important;
+      filter: drop-shadow(0 0 6px rgba(203, 166, 75, 0.6));
+    }
+    body.night-mode #mobileMenuToggleBtn,
+    body.night-mode #hamburgerIcon {
+      color: #e6e2d8 !important;
+    }
+
+    /* Section Backgrounds */
+    body.night-mode .bg-\[\#F7F3EA\],
+    body.night-mode section.bg-\[\#F7F3EA\] {
+      background-color: #0b110e !important;
+    }
+    body.night-mode .bg-\[\#EFE8D8\],
+    body.night-mode .bg-\[\#EFE8D8\]\/50,
+    body.night-mode .bg-\[\#EFE8D8\]\/40,
+    body.night-mode section.bg-\[\#EFE8D8\],
+    body.night-mode section.bg-\[\#EFE8D8\]\/50,
+    body.night-mode section.bg-\[\#EFE8D8\]\/40 {
+      background-color: #111815 !important;
+    }
+    body.night-mode .bg-\[\#F5F1E8\] {
+      background-color: #0f1613 !important;
+    }
+
+    /* Cards & Containers */
+    body.night-mode .bg-white,
+    body.night-mode article.bg-white,
+    body.night-mode div.bg-white {
+      background-color: #151d19 !important;
+      border-color: rgba(184, 154, 90, 0.25) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+    }
+    body.night-mode [class*="from-white"],
+    body.night-mode [class*="to-white"],
+    body.night-mode [class*="from-\[\#F7F3EA\]"] {
+      background: #151d19 !important;
+    }
+
+    /* Headings, Body Text & Subtitles */
+    body.night-mode .text-\[\#0D4035\],
+    body.night-mode .text-\[\#35312C\],
+    body.night-mode .text-\[\#202522\],
+    body.night-mode .text-\[\#1C201D\],
+    body.night-mode h1.text-\[\#0D4035\],
+    body.night-mode h2.text-\[\#0D4035\],
+    body.night-mode h3.text-\[\#0D4035\],
+    body.night-mode h4.text-\[\#0D4035\],
+    body.night-mode h5.text-\[\#0D4035\] {
+      color: #f3efe6 !important;
+    }
+    body.night-mode .text-\[\#4A4D49\],
+    body.night-mode .text-\[\#555852\],
+    body.night-mode .text-\[\#6F716B\],
+    body.night-mode .text-\[\#888A84\],
+    body.night-mode .text-stone-600,
+    body.night-mode .text-stone-700 {
+      color: #a4a9a0 !important;
+    }
+    body.night-mode .text-\[\#B89A5A\],
+    body.night-mode .text-\[\#CBA64B\],
+    body.night-mode .text-\[\#D4AF37\] {
+      color: #d6b25e !important;
+    }
+
+    /* Borders & Separators */
+    body.night-mode .border-\[\#35312C\],
+    body.night-mode .border-\[\#35312C\]\/25,
+    body.night-mode .border-\[\#35312C\]\/10,
+    body.night-mode .border-\[\#35312C\]\/20,
+    body.night-mode .border-\[\#EFE8D8\] {
+      border-color: rgba(203, 166, 75, 0.2) !important;
+    }
+    body.night-mode .border-\[\#B89A5A\]\/30,
+    body.night-mode .border-\[\#B89A5A\]\/25,
+    body.night-mode .border-\[\#B89A5A\]\/35 {
+      border-color: rgba(184, 154, 90, 0.3) !important;
+    }
+
+    /* Badges & Accents */
+    body.night-mode .bg-\[\#0D4035\]\/10 {
+      background-color: rgba(203, 166, 75, 0.12) !important;
+    }
+    body.night-mode .bg-\[\#F7F3EA\]\/95 {
+      background-color: rgba(15, 22, 19, 0.95) !important;
+      color: #d6b25e !important;
+    }
+
+    /* Gallery Filter Buttons */
+    body.night-mode .gallery-filter-btn {
+      background-color: #151d19 !important;
+      color: #e6e2d8 !important;
+      border-color: rgba(184, 154, 90, 0.3) !important;
+    }
+    body.night-mode .gallery-filter-btn.bg-\[\#0D4035\],
+    body.night-mode .gallery-filter-btn[class*="bg-\[\#0D4035\]"] {
+      background-color: #cba64b !important;
+      color: #0b110e !important;
+      border-color: #cba64b !important;
+    }
+
+    /* Menu Carousel Navigation Controls */
+    body.night-mode #menuCarouselPrevBtn,
+    body.night-mode #menuCarouselNextBtn {
+      background-color: #151d19 !important;
+      color: #d6b25e !important;
+      border-color: rgba(184, 154, 90, 0.4) !important;
+    }
+    body.night-mode #menuCarouselPrevBtn:hover,
+    body.night-mode #menuCarouselNextBtn:hover {
+      background-color: #cba64b !important;
+      color: #0b110e !important;
+    }
+
+    /* Form Fields & Inputs */
+    body.night-mode input:not([type="checkbox"]),
+    body.night-mode select,
+    body.night-mode textarea {
+      background-color: #131a17 !important;
+      color: #f3efe6 !important;
+      border-color: rgba(184, 154, 90, 0.35) !important;
+    }
+    body.night-mode input::placeholder,
+    body.night-mode textarea::placeholder {
+      color: #7b8178 !important;
+    }
+    body.night-mode select option {
+      background-color: #131a17 !important;
+      color: #f3efe6 !important;
+    }
+
+    /* Menu Detail Modal */
+    body.night-mode #menuDetailModal .bg-\[\#F5F1E8\],
+    body.night-mode #menuDetailModal .bg-white {
+      background-color: #111815 !important;
+      color: #e6e2d8 !important;
+    }
+    body.night-mode #modalDishesContainer > div,
+    body.night-mode #modalAccompanimentsContainer > div {
+      background-color: #161e1a !important;
+      border-color: rgba(184, 154, 90, 0.25) !important;
+    }
+
+    /* Trust & Advantage Cards (Produits frais, Cuisine authentique, Service professionnel, Sur mesure) */
+    body.night-mode .trust-card,
+    body.night-mode .bg-white\/80,
+    body.night-mode div[class*="bg-white/80"] {
+      background-color: #151d19 !important;
+      border-color: rgba(203, 166, 75, 0.35) !important;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+    }
+    body.night-mode .trust-card:hover,
+    body.night-mode .bg-white\/80:hover,
+    body.night-mode div[class*="bg-white/80"]:hover {
+      background-color: #19241f !important;
+      border-color: #cba64b !important;
+    }
+    body.night-mode .trust-card h4,
+    body.night-mode .bg-white\/80 h4,
+    body.night-mode div[class*="bg-white/80"] h4 {
+      color: #f7f3ea !important;
+    }
+    body.night-mode .trust-card p,
+    body.night-mode .bg-white\/80 p,
+    body.night-mode div[class*="bg-white/80"] p {
+      color: #b0b5aa !important;
+    }
+    body.night-mode .trust-card [data-lucide],
+    body.night-mode .bg-white\/80 [data-lucide],
+    body.night-mode div[class*="bg-white/80"] svg {
+      color: #d6b25e !important;
+    }
+    body.night-mode .trust-card .bg-\[\#0D4035\]\/10,
+    body.night-mode .bg-white\/80 .bg-\[\#0D4035\]\/10,
+    body.night-mode div[class*="bg-white/80"] .bg-\[\#0D4035\]\/10 {
+      background-color: rgba(203, 166, 75, 0.15) !important;
+    }
+
+    /* Subtle elegant shadow in place of deleted black line for hero section and navbar */
+    #main-nav {
+      border-bottom: none !important;
+      box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.06) !important;
+    }
+    body.night-mode #main-nav {
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35) !important;
+    }
+    #mobileMenu {
+      border-bottom-color: rgba(184, 154, 90, 0.3) !important;
+    }
+    #accueil {
+      border-bottom: none !important;
+      border-top: none !important;
+      outline: none !important;
+      position: relative !important;
+      z-index: 20 !important;
+      box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.22), 0 8px 14px -6px rgba(0, 0, 0, 0.12) !important;
+    }
+    body.night-mode #accueil {
+      box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.45), 0 8px 16px -6px rgba(0, 0, 0, 0.3) !important;
+    }
+    #accueil::after,
+    #accueil::before {
+      display: none !important;
+    }
+    #accueil + section {
+      border-top: none !important;
+    }
+
+    /* Custom Composition Card ("Une composition personnalisée pour votre événement ?") */
+    body.night-mode .custom-composition-card,
+    body.night-mode div[class*="bg-\[\#EFE8D8\]\/80"],
+    body.night-mode div[class*="bg-[#EFE8D8]/80"] {
+      background-color: #141c18 !important;
+      border-color: rgba(203, 166, 75, 0.4) !important;
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6) !important;
+    }
+    body.night-mode .custom-composition-card h4,
+    body.night-mode div[class*="bg-\[\#EFE8D8\]\/80"] h4,
+    body.night-mode div[class*="bg-[#EFE8D8]/80"] h4 {
+      color: #f7f3ea !important;
+    }
+    body.night-mode .custom-composition-card p,
+    body.night-mode div[class*="bg-\[\#EFE8D8\]\/80"] p,
+    body.night-mode div[class*="bg-[#EFE8D8]/80"] p {
+      color: #b0b5aa !important;
+    }
+    body.night-mode .custom-composition-card button,
+    body.night-mode div[class*="bg-\[\#EFE8D8\]\/80"] button,
+    body.night-mode div[class*="bg-[#EFE8D8]/80"] button {
+      background-color: #0d4035 !important;
+      border-color: rgba(203, 166, 75, 0.6) !important;
+      color: #ffffff !important;
+    }
+    body.night-mode .custom-composition-card button:hover,
+    body.night-mode div[class*="bg-\[\#EFE8D8\]\/80"] button:hover,
+    body.night-mode div[class*="bg-[#EFE8D8]/80"] button:hover {
+      background-color: #174f43 !important;
+      border-color: #cba64b !important;
+    }
+
+    /* Smooth Transitions */
+    body, #main-nav, section, article, div.bg-white, input, select, textarea {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
   </style>
 </head>
 <body class="bg-[#F7F3EA] text-[#202522] font-sans antialiased selection:bg-[#B89A5A] selection:text-white">
 
-  <!-- ================= FIXED HEADER / NAVIGATION ================= -->
-  <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#F7F3EA]/95 backdrop-blur-md border-b border-[#B89A5A]/30 shadow-xs">
-    <div class="relative w-full max-w-[1720px] mx-auto px-4 min-[400px]:px-6 sm:px-10 lg:px-16 xl:px-20 h-20 sm:h-22 flex items-center justify-between">
+  <!-- ================= LUXURY REFERENCE NAVBAR ================= -->
+  <!--
+    - Background: #F5F1E8 (warm ivory / cream)
+    - Full width: w-full
+    - Height: Desktop ~124px (h-[124px]), Mobile h-20 sm:h-24
+    - Bottom border: 3px solid #35312C
+    - Vertically centered elements
+    - Jost typography, 500 weight, uppercase, tracking-[2px], 15-16px, leading-[1.4]
+    - Inactive links: #35312C, Active link & selected language: #CBA64B
+    - Hover transition: 200-300ms to #CBA64B
+    - Logo centered relative to viewport: width 145-165px, max height 95px, object-fit contain
+  -->
+  <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#F5F1E8]">
+    <div class="relative w-full px-[4.5%] xl:px-[5%] h-16 sm:h-20 lg:h-[105px] flex items-center justify-between">
       
-      <!-- BRAND LOGO (LEFT) -->
-      <a href="#accueil" class="flex items-center gap-2.5 min-[400px]:gap-3.5 sm:gap-4 group shrink-0">
-        <div class="relative shrink-0 flex items-center justify-center p-0.5 rounded-full bg-gradient-to-br from-[#E8CE7A]/60 via-[#B89A5A]/50 to-[#9E7B32]/40 group-hover:from-[#FFF0C2] group-hover:to-[#D4AF37] transition-all duration-300 shadow-sm">
-          <img
-            src="./logo-icon.svg"
-            alt="Maison des Saveurs - Traiteur Casablanca"
-            class="h-10 w-10 min-[400px]:h-12 min-[400px]:w-12 sm:h-14 sm:w-14 object-contain rounded-full transition-transform duration-300 group-hover:scale-105 shadow-inner"
-            onerror="this.src='./images/about.jpg'"
-          />
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-base min-[380px]:text-lg min-[440px]:text-xl sm:text-2xl font-bold tracking-widest text-[#1A1714] leading-tight uppercase transition-colors group-hover:text-[#B89A5A]">
-            Maison des Saveurs
-          </span>
-        </div>
-      </a>
-
-      <!-- DESKTOP CTA & NAVIGATION MENU (RIGHT SIDE) -->
-      <div class="hidden lg:flex items-center gap-3.5 xl:gap-4 shrink-0">
-        <a
-          href="https://wa.me/212725594910"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center p-3 rounded-full text-[#0D4035] hover:text-[#B89A5A] hover:bg-[#EFE8D8] transition-all"
-          title="WhatsApp"
-        >
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-        </a>
-        <a
-          href="#reservation"
-          class="inline-flex items-center justify-center px-6 xl:px-7 py-2.5 xl:py-3 rounded-full bg-[#0D4035] text-white text-sm xl:text-base font-semibold hover:bg-[#174F43] transition-all duration-300 shadow-md hover:shadow-xl border border-[#B89A5A]/50"
-        >
-          Réserver
-        </a>
-
-        <!-- Clickable Menu Button - positioned to the right of the Réserver button -->
-        <div class="relative">
-          <button
-            type="button"
-            id="desktopMenuToggleBtn"
-            class="flex items-center gap-2 px-4 py-2.5 xl:px-4.5 xl:py-3 rounded-full text-xs xl:text-sm font-semibold transition-all duration-300 cursor-pointer border bg-white/85 text-[#1A1714] border-[#B89A5A]/50 hover:text-[#0D4035] hover:border-[#B89A5A] hover:bg-[#EFE8D8]/80 shadow-xs"
-            aria-expanded="false"
-            aria-label="Menu de navigation"
-          >
-            <i data-lucide="menu" class="w-4 h-4 text-[#B89A5A]"></i>
-            <span>Menu</span>
-            <i data-lucide="chevron-down" id="desktopMenuChevron" class="w-3.5 h-3.5 transition-transform duration-300"></i>
-          </button>
-
-          <!-- Dropdown Menu - aligned to right edge -->
-          <div
-            id="desktopDropdown"
-            class="hidden absolute top-full right-0 mt-3 w-64 bg-[#F7F3EA] rounded-2xl border border-[#B89A5A]/40 shadow-2xl p-2.5 space-y-1 z-50 backdrop-blur-xl"
-          >
-            <div class="px-3.5 py-2 border-b border-[#B89A5A]/20">
-              <p class="text-[10px] uppercase font-bold tracking-widest text-[#B89A5A]">
-                Navigation
-              </p>
-            </div>
-
-            <!-- Menus, Galerie, Contact inside the menu -->
-            <a href="#menus" class="desktop-drop-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold text-[#0D4035] bg-[#EFE8D8]/70 hover:bg-[#EFE8D8] transition-colors">
-              <span class="flex items-center gap-2.5">
-                <i data-lucide="utensils" class="w-4 h-4 text-[#B89A5A]"></i>
-                Nos Menus
-              </span>
-              <span class="text-[10px] uppercase bg-[#B89A5A]/25 text-[#73571C] px-2 py-0.5 rounded-full font-bold">
-                Carte
-              </span>
-            </a>
-            <a href="#galerie" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <i data-lucide="sparkles" class="w-4 h-4 text-[#B89A5A]"></i>
-              Galerie Photos
-            </a>
-            <a href="#contact" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <i data-lucide="phone" class="w-4 h-4 text-[#B89A5A]"></i>
-              Contact &amp; Accès
-            </a>
-
-            <div class="my-1 border-t border-[#B89A5A]/20"></div>
-
-            <!-- Additional sections -->
-            <a href="#accueil" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#B89A5A]"></span>
-              Accueil
-            </a>
-            <a href="#prestations" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#B89A5A]"></span>
-              Prestations
-            </a>
-            <a href="#apropos" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#B89A5A]"></span>
-              À Propos
-            </a>
-            <a href="#localisation" class="desktop-drop-link flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-medium text-[#202522] hover:text-[#0D4035] hover:bg-[#EFE8D8] transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#B89A5A]"></span>
-              Localisation &amp; GPS
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- MOBILE HAMBURGER BUTTON -->
-      <div class="lg:hidden flex items-center">
+      <!-- ================= MOBILE MENU BUTTON (LEFT OF LOGO) ================= -->
+      <div class="lg:hidden flex items-center z-30">
         <button
           type="button"
           id="mobileMenuToggleBtn"
-          class="text-[#0D4035] p-2.5 rounded-lg hover:bg-[#EFE8D8] focus:outline-none transition-colors"
+          class="text-[#35312C] p-2 hover:text-[#CBA64B] focus:outline-none transition-colors cursor-pointer flex items-center justify-center"
           aria-label="Menu principal"
         >
-          <i data-lucide="menu" id="hamburgerIcon" class="w-8 h-8"></i>
+          <i data-lucide="menu" id="hamburgerIcon" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- ================= 1. LEFT NAVIGATION GROUP ================= -->
+      <nav class="hidden lg:flex items-center gap-7 xl:gap-8 font-jost text-[15px] xl:text-[16px] font-medium tracking-[2px] uppercase leading-[1.4] z-10 shrink-0">
+        <!-- ACCUEIL -->
+        <a
+          href="#accueil"
+          class="nav-link-item text-[#CBA64B] transition-colors duration-250 hover:text-[#CBA64B]"
+          data-nav="accueil"
+        >
+          Accueil
+        </a>
+
+        <!-- MENUS -->
+        <a
+          href="#menus"
+          class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+          data-nav="menus"
+        >
+          Menus
+        </a>
+
+        <!-- NOS PRESTATIONS -->
+        <a
+          href="#prestations"
+          class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+          data-nav="prestations"
+        >
+          Nos Prestations
+        </a>
+      </nav>
+
+      <!-- ================= 2. CENTER SECTION: MATHEMATICALLY CENTERED LOGO ================= -->
+      <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-20">
+        <a href="#accueil" class="inline-flex items-center justify-center group" aria-label="Maison des Saveurs Accueil">
+          <img
+            src="https://i.postimg.cc/85FggPFb/Maison-de-Saveur-Gold-Emblem.png"
+            alt="Maison des Saveurs - Traiteur & Événementiel"
+            class="w-[124px] sm:w-[132px] xl:w-[140px] max-h-[60px] sm:max-h-[70px] lg:max-h-[80px] object-contain transition-transform duration-300 group-hover:scale-105"
+            onerror="this.src='./logo-gold.png'"
+          />
+        </a>
+      </div>
+
+      <!-- ================= 3. RIGHT NAVIGATION GROUP ================= -->
+      <div class="hidden lg:flex items-center z-10 shrink-0">
+        <!-- Navigation links -->
+        <nav class="flex items-center gap-6 xl:gap-7 font-jost text-[15px] xl:text-[16px] font-medium tracking-[2px] uppercase leading-[1.4]">
+          <a
+            href="#references"
+            class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+            data-nav="references"
+          >
+            Références
+          </a>
+          <a
+            href="#galerie"
+            class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+            data-nav="galerie"
+          >
+            Galerie
+          </a>
+          <a
+            href="#blog"
+            class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+            data-nav="blog"
+          >
+            Blog
+          </a>
+          <a
+            href="#contact"
+            class="nav-link-item text-[#35312C] transition-colors duration-250 hover:text-[#CBA64B]"
+            data-nav="contact"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <!-- Crescent-Moon Dark-Mode / Night Ambiance Toggle Icon -->
+        <div class="ml-3 xl:ml-4 pl-3 xl:pl-4 border-l border-[#35312C]/25 flex items-center">
+          <button
+            type="button"
+            id="themeToggleBtn"
+            onclick="toggleThemeMode()"
+            class="p-1.5 text-[#35312C] hover:text-[#CBA64B] transition-colors duration-250 cursor-pointer flex items-center justify-center"
+            aria-label="Basculer le mode sombre / ambiance nuit"
+            title="Mode nuit"
+          >
+            <i data-lucide="moon" id="themeMoonIcon" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= MOBILE DARK MODE TOGGLE (RIGHT OF LOGO) ================= -->
+      <div class="lg:hidden flex items-center z-30">
+        <button
+          type="button"
+          id="mobileThemeToggleBtn"
+          onclick="toggleThemeMode()"
+          class="p-2 text-[#35312C] hover:text-[#CBA64B] transition-colors cursor-pointer flex items-center justify-center"
+          aria-label="Basculer le mode sombre"
+          title="Mode nuit"
+        >
+          <i data-lucide="moon" class="w-5 h-5"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- MOBILE MENU DROPDOWN -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#F7F3EA] border-b border-[#B89A5A]/30 px-6 pt-4 pb-8 space-y-3.5 shadow-2xl">
-      <a href="#accueil" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
+    <!-- ================= MOBILE DRAWER MENU ================= -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden bg-[#F5F1E8] border-b border-[#B89A5A]/30 px-6 py-6 space-y-3.5 shadow-2xl font-jost text-sm uppercase tracking-[2px] font-medium"
+    >
+      <a href="#accueil" class="mobile-nav-link block py-2 text-[#CBA64B] border-b border-[#35312C]/10">
         Accueil
       </a>
-      <a href="#prestations" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
-        Prestations
+      <a href="#menus" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
+        Menus
       </a>
-      <a href="#menus" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
-        Nos Menus
+      <a href="#prestations" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
+        Nos Prestations
       </a>
-      <a href="#galerie" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
+      <a href="#references" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
+        Références
+      </a>
+      <a href="#galerie" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
         Galerie
       </a>
-      <a href="#apropos" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
-        À propos
+      <a href="#blog" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
+        Blog
       </a>
-      <a href="#localisation" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
-        Localisation
-      </a>
-      <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-base font-medium text-[#202522] hover:text-[#B89A5A] hover:bg-[#EFE8D8]">
+      <a href="#contact" class="mobile-nav-link block py-2 text-[#35312C] hover:text-[#CBA64B] border-b border-[#35312C]/10">
         Contact
       </a>
       <div class="pt-3">
         <a
           href="#reservation"
-          class="mobile-nav-link block w-full text-center px-7 py-3.5 rounded-full bg-[#0D4035] text-white text-base font-semibold hover:bg-[#174F43] transition-colors shadow-lg"
+          class="mobile-nav-link block w-full text-center py-3.5 bg-[#35312C] text-[#F5F1E8] tracking-[2px] hover:bg-[#CBA64B] hover:text-[#35312C] transition-colors"
         >
           Réserver un événement
         </a>
@@ -247,7 +564,7 @@
   </header>
 
   <!-- ================= HERO SECTION WITH CINEMATIC SLIDESHOW ================= -->
-  <section id="accueil" class="relative w-full min-h-[100svh] flex items-center pt-24 pb-14 overflow-hidden bg-[#0D4035]">
+  <section id="accueil" class="relative z-20 w-full min-h-[85svh] flex items-center pt-24 sm:pt-28 lg:pt-[116px] pb-10 sm:pb-12 overflow-hidden bg-[#0D4035]">
     <!-- Slides Container -->
     <div class="absolute inset-0 z-0 overflow-hidden" id="heroSlidesContainer">
       <div class="hero-slide active">
@@ -274,44 +591,38 @@
       <div class="absolute inset-0 hero-vignette z-15 pointer-events-none"></div>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-20 w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 py-12 sm:py-20 flex flex-col justify-center">
-      <div class="max-w-4xl text-left">
+    <!-- Content: Centered in Hero -->
+    <div class="relative z-20 w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 py-8 sm:py-14 flex flex-col justify-center items-center">
+      <div class="max-w-4xl text-center mx-auto flex flex-col items-center">
         
         <!-- Haute Gastronomie Quote -->
-        <div class="inline-flex items-center gap-2.5 sm:gap-3.5 mb-6 sm:mb-8">
-          <span class="w-5 sm:w-8 h-[1px] bg-[#B89A5A]"></span>
-          <p class="font-serif italic text-xs min-[380px]:text-sm sm:text-base text-[#F7F3EA] tracking-wider drop-shadow-sm">
+        <div class="inline-flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+          <span class="w-5 sm:w-7 h-[1px] bg-[#B89A5A]"></span>
+          <p class="font-serif italic text-[11px] min-[380px]:text-[13px] sm:text-[14.5px] text-[#F7F3EA] tracking-wider drop-shadow-sm">
             « L'art de la haute gastronomie & l'excellence de recevoir »
           </p>
-          <span class="w-5 sm:w-8 h-[1px] bg-[#B89A5A]"></span>
+          <span class="w-5 sm:w-7 h-[1px] bg-[#B89A5A]"></span>
         </div>
 
         <!-- Main Heading -->
-        <h1 class="font-serif text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-white font-normal leading-[1.08] mb-6 drop-shadow-md">
+        <h1 class="font-serif text-[27px] min-[380px]:text-[34px] sm:text-[52px] md:text-[62px] xl:text-[72px] text-white font-normal leading-[1.1] mb-4 sm:mb-5 drop-shadow-md">
           Des saveurs uniques <br class="hidden sm:block" />
           <span class="italic font-serif text-[#B89A5A]">pour vos plus beaux</span> moments
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-base sm:text-xl lg:text-2xl text-[#F7F3EA]/95 font-light leading-relaxed mb-10 sm:mb-12 max-w-3xl drop-shadow-xs">
+        <p class="text-[14px] sm:text-[17.5px] lg:text-[21px] text-[#F7F3EA]/95 font-light leading-relaxed mb-8 sm:mb-10 max-w-2xl drop-shadow-xs">
           Mariages, anniversaires, fiançailles et événements professionnels, imaginés sur mesure pour vous à Casablanca et partout au Maroc.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 items-stretch sm:items-center">
-          <a
-            href="#reservation"
-            class="px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-[#0D4035] text-white font-semibold text-base sm:text-lg text-center hover:bg-[#174F43] transition-all duration-300 shadow-2xl hover:shadow-3xl border border-[#B89A5A]/50 flex items-center justify-center gap-3 group"
-          >
-            <span>Réserver votre événement</span>
-            <i data-lucide="chevron-right" class="w-5 h-5 text-[#B89A5A] group-hover:translate-x-1.5 transition-transform"></i>
-          </a>
+        <div class="flex justify-center items-center">
           <a
             href="#prestations"
-            class="px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-white/15 backdrop-blur-md text-[#F7F3EA] font-semibold text-base sm:text-lg text-center hover:bg-white/25 border border-white/35 transition-all duration-300 shadow-lg"
+            class="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-white/15 backdrop-blur-md text-[#F7F3EA] font-semibold text-sm sm:text-[15.5px] text-center hover:bg-white/25 border border-white/35 transition-all duration-300 shadow-lg inline-flex items-center gap-2.5 sm:gap-3 group"
           >
-            Découvrir nos prestations
+            <span>Découvrir nos prestations</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#B89A5A] group-hover:translate-x-1.5 transition-transform"></i>
           </a>
         </div>
 
@@ -320,11 +631,11 @@
   </section>
 
   <!-- ================= TRUST / ADVANTAGES BAR ================= -->
-  <section class="bg-[#EFE8D8] border-y border-[#B89A5A]/30 py-10 sm:py-14">
+  <section class="bg-[#EFE8D8] border-b border-[#B89A5A]/30 py-10 sm:py-14">
     <div class="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       <div class="grid grid-cols-2 min-[600px]:grid-cols-2 min-[900px]:grid-cols-4 gap-3 sm:gap-5 lg:gap-7">
         
-        <div class="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
+        <div class="trust-card flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
           <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0D4035]/10 flex items-center justify-center text-[#B89A5A] shrink-0">
             <i data-lucide="sparkles" class="w-6 h-6"></i>
           </div>
@@ -334,7 +645,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
+        <div class="trust-card flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
           <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0D4035]/10 flex items-center justify-center text-[#B89A5A] shrink-0">
             <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
           </div>
@@ -344,7 +655,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
+        <div class="trust-card flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
           <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0D4035]/10 flex items-center justify-center text-[#B89A5A] shrink-0">
             <i data-lucide="users" class="w-6 h-6"></i>
           </div>
@@ -354,7 +665,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
+        <div class="trust-card flex flex-col min-[480px]:flex-row items-start min-[480px]:items-center gap-3 sm:gap-5 p-4 sm:p-6 rounded-2xl bg-white/80 border border-[#B89A5A]/30 shadow-xs hover:shadow-md transition-all">
           <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0D4035]/10 flex items-center justify-center text-[#B89A5A] shrink-0">
             <i data-lucide="award" class="w-6 h-6"></i>
           </div>
@@ -370,9 +681,9 @@
 
   <!-- ================= PRESTATIONS SECTION ================= -->
   <section id="prestations" class="py-20 sm:py-28 bg-[#F7F3EA]">
-    <div class="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
+    <div class="w-full max-w-[1720px] mx-auto px-3.5 min-[400px]:px-6 sm:px-10 lg:px-16 xl:px-20">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-18">
         <span class="text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-[#B89A5A] block mb-3">
           Nos Prestations d'Exception
         </span>
@@ -385,166 +696,113 @@
         <div class="w-20 h-0.5 bg-[#B89A5A] mx-auto mt-6"></div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
+      <!-- 2 cards per row on mobile, 4 cards on desktop -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 min-[400px]:gap-4.5 sm:gap-6 lg:gap-6 xl:gap-8">
         
         <!-- Mariages -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
+        <div class="group bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
+          <div class="relative h-40 min-[380px]:h-48 sm:h-72 lg:h-80 overflow-hidden">
             <img src="./images/prestations/mariages.png" alt="Mariages d'exception" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
+            <span class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 sm:px-3.5 py-0.5 sm:py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
               Exclusif
             </span>
           </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
+          <div class="p-3 min-[380px]:p-4 sm:p-7 xl:p-8 flex flex-col justify-between grow">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Mariages</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
+              <h3 class="font-serif text-base min-[380px]:text-lg sm:text-2xl xl:text-3xl text-[#0D4035] mb-1 sm:mb-2 font-medium">Mariages</h3>
+              <p class="text-[#6F716B] text-xs sm:text-sm xl:text-base leading-relaxed mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
                 Une réception élégante pensée dans les moindres détails pour faire de votre union un jour inoubliable.
               </p>
             </div>
             <button
               type="button"
               onclick="selectEventForQuote('Mariage')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
+              class="inline-flex items-center text-[11px] sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-2 sm:pt-3 border-t border-[#EFE8D8] mt-auto"
             >
               <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 sm:ml-1"></i>
             </button>
           </div>
         </div>
 
         <!-- Anniversaires -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
+        <div class="group bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
+          <div class="relative h-40 min-[380px]:h-48 sm:h-72 lg:h-80 overflow-hidden">
             <img src="./images/prestations/anniversaires.png" alt="Anniversaires" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
+            <span class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 sm:px-3.5 py-0.5 sm:py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
               Célébration
             </span>
           </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
+          <div class="p-3 min-[380px]:p-4 sm:p-7 xl:p-8 flex flex-col justify-between grow">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Anniversaires</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
+              <h3 class="font-serif text-base min-[380px]:text-lg sm:text-2xl xl:text-3xl text-[#0D4035] mb-1 sm:mb-2 font-medium">Anniversaires</h3>
+              <p class="text-[#6F716B] text-xs sm:text-sm xl:text-base leading-relaxed mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
                 Des moments chaleureux entourés de vos proches autour d'une cuisine raffinée et généreuse.
               </p>
             </div>
             <button
               type="button"
               onclick="selectEventForQuote('Anniversaire')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
+              class="inline-flex items-center text-[11px] sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-2 sm:pt-3 border-t border-[#EFE8D8] mt-auto"
             >
               <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 sm:ml-1"></i>
             </button>
           </div>
         </div>
 
-        <!-- Fiançailles -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
-            <img src="./images/prestations/fiancailles.jpg" alt="Fiançailles & Réceptions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        <!-- Événements -->
+        <div class="group bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
+          <div class="relative h-40 min-[380px]:h-48 sm:h-72 lg:h-80 overflow-hidden">
+            <img src="./images/prestations/evenements-pro.jpg" alt="Événements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
-              Intimité
+            <span class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 sm:px-3.5 py-0.5 sm:py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
+              Corporate & Privé
             </span>
           </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
+          <div class="p-3 min-[380px]:p-4 sm:p-7 xl:p-8 flex flex-col justify-between grow">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Fiançailles</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
-                Une prestation raffinée marquant le premier chapitre de votre engagement dans le respect des traditions.
-              </p>
-            </div>
-            <button
-              type="button"
-              onclick="selectEventForQuote('Fiançailles')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
-            >
-              <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Événements Pro -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
-            <img src="./images/prestations/evenements-pro.jpg" alt="Événements professionnels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
-              Corporate
-            </span>
-          </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
-            <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Événements Pro</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
+              <h3 class="font-serif text-base min-[380px]:text-lg sm:text-2xl xl:text-3xl text-[#0D4035] mb-1 sm:mb-2 font-medium">Événements</h3>
+              <p class="text-[#6F716B] text-xs sm:text-sm xl:text-base leading-relaxed mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
                 Des solutions gourmandes et impeccables adaptées à vos réunions, séminaires, galas et réceptions.
               </p>
             </div>
             <button
               type="button"
               onclick="selectEventForQuote('Événement professionnel')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
+              class="inline-flex items-center text-[11px] sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-2 sm:pt-3 border-t border-[#EFE8D8] mt-auto"
             >
               <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 sm:ml-1"></i>
             </button>
           </div>
         </div>
 
-        <!-- Baptêmes & Fêtes -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
-            <img src="./images/prestations/famille.jpg" alt="Baptêmes et fêtes de famille" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        <!-- Buffets -->
+        <div class="group bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
+          <div class="relative h-40 min-[380px]:h-48 sm:h-72 lg:h-80 overflow-hidden">
+            <img src="./images/gallery/buffet-1.png" alt="Buffets d'exception" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
-              Famille
-            </span>
-          </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
-            <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Baptêmes & Fêtes</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
-                Des prestations personnalisées pour célébrer chaque étape importante de la vie de famille.
-              </p>
-            </div>
-            <button
-              type="button"
-              onclick="selectEventForQuote('Baptême')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
-            >
-              <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Buffets sur mesure -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col hover:border-[#B89A5A]">
-          <div class="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
-            <img src="./images/gallery/buffet-1.png" alt="Buffets sur mesure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
-            <span class="absolute top-4 left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-xs font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
+            <span class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#F7F3EA]/95 backdrop-blur-sm text-[#0D4035] text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 sm:px-3.5 py-0.5 sm:py-1.5 rounded-full border border-[#B89A5A]/40 shadow-xs">
               Gastronomie
             </span>
           </div>
-          <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between grow">
+          <div class="p-3 min-[380px]:p-4 sm:p-7 xl:p-8 flex flex-col justify-between grow">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl xl:text-3xl text-[#0D4035] mb-2 font-medium">Buffets sur mesure</h3>
-              <p class="text-[#6F716B] text-sm xl:text-base leading-relaxed mb-6">
+              <h3 class="font-serif text-base min-[380px]:text-lg sm:text-2xl xl:text-3xl text-[#0D4035] mb-1 sm:mb-2 font-medium">Buffets</h3>
+              <p class="text-[#6F716B] text-xs sm:text-sm xl:text-base leading-relaxed mb-2.5 sm:mb-6 line-clamp-2 sm:line-clamp-none">
                 Une sélection raffinée de pièces salées, sucrées et plats chauds dressés avec une élégance rare.
               </p>
             </div>
             <button
               type="button"
               onclick="selectEventForQuote('Buffet')"
-              class="inline-flex items-center text-xs sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-3 border-t border-[#EFE8D8] mt-auto"
+              class="inline-flex items-center text-[11px] sm:text-sm font-bold text-[#B89A5A] hover:text-[#0D4035] transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-200 cursor-pointer pt-2 sm:pt-3 border-t border-[#EFE8D8] mt-auto"
             >
               <span>Demander un devis</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 sm:ml-1"></i>
             </button>
           </div>
         </div>
@@ -602,8 +860,8 @@
         </div>
 
         <!-- Carousel Track Viewport -->
-        <div id="menuCarouselViewport" class="overflow-hidden cursor-grab">
-          <div id="menuCarouselTrack" class="flex will-change-transform">
+        <div id="menuCarouselViewport" class="overflow-hidden cursor-grab" style="touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;">
+          <div id="menuCarouselTrack" class="flex will-change-transform" style="touch-action: pan-y;">
             <!-- Cards rendered dynamically -->
           </div>
         </div>
@@ -615,7 +873,7 @@
       </div>
 
       <!-- Custom composition callout -->
-      <div class="mt-14 sm:mt-18 p-8 sm:p-12 rounded-3xl bg-[#EFE8D8]/80 border border-[#B89A5A]/35 text-center max-w-5xl mx-auto shadow-sm">
+      <div class="custom-composition-card mt-14 sm:mt-18 p-8 sm:p-12 rounded-3xl bg-[#EFE8D8]/80 border border-[#B89A5A]/35 text-center max-w-5xl mx-auto shadow-sm">
         <h4 class="font-serif text-2xl sm:text-3xl text-[#0D4035] mb-3 font-normal">
           Une composition personnalisée pour votre événement ?
         </h4>
@@ -641,8 +899,8 @@
       <img src="./images/statement-banner.jpg" alt="Maison des Saveurs atmosphère" class="w-full h-full object-cover object-center" />
     </div>
     <div class="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
-      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-7 rounded-full bg-white/5 border border-[#B89A5A]/60 flex items-center justify-center p-1.5 shadow-2xl backdrop-blur-xs">
-        <img src="./logo-icon.svg" alt="Maison des Saveurs Emblème" class="w-full h-full object-contain" />
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-7 rounded-full bg-white/10 border border-[#B89A5A]/60 flex items-center justify-center p-1 shadow-2xl backdrop-blur-xs">
+        <img src="https://i.postimg.cc/85FggPFb/Maison-de-Saveur-Gold-Emblem.png" alt="Maison des Saveurs Emblème" class="w-full h-full object-contain rounded-full" onerror="this.src='./logo-gold.png'" />
       </div>
       <blockquote class="font-serif text-2xl sm:text-4xl lg:text-5xl text-[#F7F3EA] font-light leading-relaxed italic mb-7">
         « Chaque événement est une histoire unique. <br class="hidden sm:block" />
@@ -698,8 +956,9 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT SECTION ================= -->
-  <section id="apropos" class="py-20 sm:py-28 bg-[#EFE8D8]/50 border-y border-[#B89A5A]/30">
+  <!-- ================= ABOUT SECTION / NOTRE HISTOIRE ================= -->
+  <section id="apropos" class="py-20 sm:py-28 bg-[#EFE8D8]/50 border-y border-[#B89A5A]/30 relative">
+    <span id="notre-histoire" class="absolute -top-32 left-0 h-1 w-1 opacity-0 pointer-events-none"></span>
     <div class="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
@@ -764,8 +1023,8 @@
     </div>
   </section>
 
-  <!-- ================= TESTIMONIALS / AVIS CLIENTS ================= -->
-  <section class="py-20 sm:py-28 bg-[#F7F3EA]">
+  <!-- ================= TESTIMONIALS / AVIS CLIENTS / RÉFÉRENCES ================= -->
+  <section id="references" class="py-20 sm:py-28 bg-[#F7F3EA]">
     <div class="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       
       <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
@@ -855,6 +1114,101 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LUXURY JOURNAL / BLOG ================= -->
+  <section id="blog" class="py-20 sm:py-28 bg-[#EFE8D8]/40 border-t border-[#B89A5A]/30">
+    <div class="w-full max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
+      <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <span class="font-jost text-xs sm:text-sm font-medium uppercase tracking-[3px] text-[#CBA64B] block mb-3">
+          Inspirations &amp; Art de Recevoir
+        </span>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#0D4035] font-normal mb-4">
+          Le Journal Gourmand
+        </h2>
+        <p class="text-[#6F716B] text-base sm:text-lg leading-relaxed">
+          Conseils traiteur, tendances nuptiales et secrets de la haute gastronomie marocaine à Casablanca.
+        </p>
+        <div class="w-20 h-0.5 bg-[#CBA64B] mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Article 1 -->
+        <article class="bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="aspect-[16/10] overflow-hidden relative">
+            <img src="./images/gallery/mariage-1.png" alt="Mariage d'exception" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <span class="absolute top-3 left-3 bg-[#F5F1E8] text-[#35312C] font-jost text-[11px] tracking-[2px] uppercase px-3 py-1 font-medium border border-[#CBA64B]/40">
+              Mariages 2026
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <span class="text-xs text-[#6F716B] font-jost tracking-[1px] uppercase block mb-2">15 Octobre 2026 · 5 min de lecture</span>
+              <h3 class="font-serif text-xl sm:text-2xl text-[#0D4035] group-hover:text-[#CBA64B] transition-colors mb-3 leading-snug">
+                Les tendances culinaires des réceptions royales à Casablanca
+              </h3>
+              <p class="text-sm text-[#6F716B] leading-relaxed line-clamp-3">
+                Découvrez comment allier la splendeur des traditions marocaines aux dressages contemporains pour émerveiller vos invités.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 font-jost text-xs uppercase tracking-[2px] font-medium text-[#CBA64B] group-hover:text-[#35312C] transition-colors mt-6">
+              <span>Lire l'article</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="aspect-[16/10] overflow-hidden relative">
+            <img src="./images/gallery/buffet-1.png" alt="Buffet d'exception" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <span class="absolute top-3 left-3 bg-[#F5F1E8] text-[#35312C] font-jost text-[11px] tracking-[2px] uppercase px-3 py-1 font-medium border border-[#CBA64B]/40">
+              Gastronomie
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <span class="text-xs text-[#6F716B] font-jost tracking-[1px] uppercase block mb-2">02 Octobre 2026 · 4 min de lecture</span>
+              <h3 class="font-serif text-xl sm:text-2xl text-[#0D4035] group-hover:text-[#CBA64B] transition-colors mb-3 leading-snug">
+                L'art de scénographier un buffet cocktail haut de gamme
+              </h3>
+              <p class="text-sm text-[#6F716B] leading-relaxed line-clamp-3">
+                De la verrine raffinée à la pièce maîtresse, nos chefs partagent leurs astuces pour un buffet aussi beau que succulent.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 font-jost text-xs uppercase tracking-[2px] font-medium text-[#CBA64B] group-hover:text-[#35312C] transition-colors mt-6">
+              <span>Lire l'article</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="bg-white rounded-2xl overflow-hidden border border-[#B89A5A]/30 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="aspect-[16/10] overflow-hidden relative">
+            <img src="./images/gallery/corporate-gala.jpg" alt="Soirée d'entreprise" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <span class="absolute top-3 left-3 bg-[#F5F1E8] text-[#35312C] font-jost text-[11px] tracking-[2px] uppercase px-3 py-1 font-medium border border-[#CBA64B]/40">
+              Événements Pro
+            </span>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <span class="text-xs text-[#6F716B] font-jost tracking-[1px] uppercase block mb-2">18 Septembre 2026 · 6 min de lecture</span>
+              <h3 class="font-serif text-xl sm:text-2xl text-[#0D4035] group-hover:text-[#CBA64B] transition-colors mb-3 leading-snug">
+                Comment réussir un gala d'entreprise inoubliable
+              </h3>
+              <p class="text-sm text-[#6F716B] leading-relaxed line-clamp-3">
+                Service fluide, ponctualité exemplaire et saveurs mémorables : les piliers d'un événement corporate d'envergure.
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-2 font-jost text-xs uppercase tracking-[2px] font-medium text-[#CBA64B] group-hover:text-[#35312C] transition-colors mt-6">
+              <span>Lire l'article</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1169,7 +1523,7 @@
             <img src="./images/whatsapp-card.jpg" alt="Maison des Saveurs Art de la Table" class="w-full h-full object-cover object-center" />
           </div>
           <div class="flex items-center justify-center gap-3 mb-2.5">
-            <img src="./logo-icon.svg" alt="Maison des Saveurs" class="w-8 h-8 object-contain rounded-full shadow-xs" />
+            <img src="https://i.postimg.cc/85FggPFb/Maison-de-Saveur-Gold-Emblem.png" alt="Maison des Saveurs" class="w-9 h-9 object-contain rounded-full shadow-xs" onerror="this.src='./logo-gold.png'" />
             <h3 class="font-serif text-2xl sm:text-3xl text-[#0D4035]">Un projet d'exception ?</h3>
           </div>
           <p class="text-[#6F716B] text-sm sm:text-base mb-6 leading-relaxed">
@@ -1284,7 +1638,7 @@
   <section class="py-20 sm:py-28 bg-[#EFE8D8] border-t border-[#B89A5A]/30 text-center">
     <div class="w-full max-w-5xl mx-auto px-6 sm:px-10">
       <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-5 rounded-full bg-white/90 border border-[#B89A5A]/40 p-1 shadow-md flex items-center justify-center">
-        <img src="./logo-icon.svg" alt="Maison des Saveurs" class="w-full h-full object-contain rounded-full" />
+        <img src="https://i.postimg.cc/85FggPFb/Maison-de-Saveur-Gold-Emblem.png" alt="Maison des Saveurs" class="w-full h-full object-contain rounded-full" onerror="this.src='./logo-gold.png'" />
       </div>
       <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#0D4035] font-normal mb-4">
         Votre événement commence ici
@@ -1308,8 +1662,13 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pb-14 border-b border-[#B89A5A]/20">
         
         <div class="col-span-2 md:col-span-1">
-          <a href="#accueil" class="inline-block mb-6">
-            <img src="./logo-light.svg" alt="Maison des Saveurs" class="h-14 sm:h-16 w-auto object-contain" />
+          <a href="#accueil" class="inline-flex items-center gap-3 mb-6 group">
+            <div class="w-14 h-14 rounded-full bg-white/10 p-0.5 border border-[#B89A5A]/40 flex items-center justify-center shadow-md">
+              <img src="https://i.postimg.cc/85FggPFb/Maison-de-Saveur-Gold-Emblem.png" alt="Maison des Saveurs" class="w-full h-full object-contain rounded-full" onerror="this.src='./logo-gold.png'" />
+            </div>
+            <span class="font-serif text-xl font-bold tracking-widest text-[#F7F3EA] uppercase group-hover:text-[#B89A5A] transition-colors">
+              Maison des Saveurs
+            </span>
           </a>
           <p class="text-[#F7F3EA]/75 text-sm leading-relaxed mb-6">
             Traiteur & Événementiel d'exception à Casablanca. Gastronomie raffinée et art de recevoir pour vos célébrations les plus précieuses.
@@ -1365,19 +1724,7 @@
     </div>
   </footer>
 
-  <!-- ================= MOBILE STICKY BOTTOM BAR ================= -->
-  <div class="fixed bottom-0 left-0 w-full bg-[#0D4035]/95 backdrop-blur-md border-t border-[#B89A5A]/30 p-3 z-40 md:hidden flex items-center justify-between shadow-2xl">
-    <div class="flex items-center gap-2.5">
-      <img src="./logo-icon.svg" alt="Maison des Saveurs" class="w-9 h-9 rounded-full object-contain shadow-xs" />
-      <div class="flex flex-col">
-        <span class="font-serif text-xs text-white font-bold uppercase leading-tight">Maison des Saveurs</span>
-        <span class="text-[10px] text-[#B89A5A]">Traiteur Casablanca</span>
-      </div>
-    </div>
-    <a href="#reservation" class="px-5 py-2 rounded-full bg-[#B89A5A] text-[#0D4035] font-semibold text-xs uppercase tracking-wider shadow-md">
-      Réserver
-    </a>
-  </div>
+
 
   <!-- ================= MENU DETAIL MODAL ================= -->
   <div id="menuDetailModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
@@ -1639,7 +1986,7 @@
       }
     ];
 
-    /* 2. DATA: GALLERY ITEMS */
+ /* 2. DATA: GALLERY ITEMS */
     const GALLERY = [
       { id: 1, category: 'mariages', src: './images/gallery/mariage-1.png', title: 'Mariage d’Exception & Scénographie', subtitle: 'Réception féerique et art de la table raffiné' },
       { id: 2, category: 'buffets', src: './images/gallery/buffet-1.png', title: 'Buffet Traiteur d’Exception', subtitle: 'Présentation gastronomique et art de la table' },
@@ -1801,6 +2148,7 @@
       menuCarouselIsTransitioning = true;
       menuCarouselCurrentIndex += diff;
       updateMenuCarouselPosition(true);
+      startAutoplay();
     }
 
     let menuCarouselEventsBound = false;
@@ -1815,10 +2163,20 @@
       const nextBtn = document.getElementById('menuCarouselNextBtn');
       const total = MENUS.length;
 
-      if (prevBtn) prevBtn.addEventListener('click', handleMenuCarouselPrev);
-      if (nextBtn) nextBtn.addEventListener('click', handleMenuCarouselNext);
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          handleMenuCarouselPrev();
+          startAutoplay();
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          handleMenuCarouselNext();
+          startAutoplay();
+        });
+      }
 
-      // Transition snap back to middle set
+      // Transition snap back to middle set for bidirectional infinite loop
       if (track) {
         track.addEventListener('transitionend', (e) => {
           if (e.target !== track) return;
@@ -1833,7 +2191,7 @@
         });
       }
 
-      // Autoplay every 4s
+      // Automatic swipe left every 4s
       function startAutoplay() {
         clearInterval(menuCarouselAutoplayTimer);
         menuCarouselAutoplayTimer = setInterval(() => {
@@ -1849,10 +2207,11 @@
         container.addEventListener('mouseleave', () => {
           menuCarouselIsHovered = false;
           if (menuCarouselIsDragging) endDrag();
+          startAutoplay();
         });
       }
 
-      // Drag / Swipe handling
+      // Desktop mouse drag handling
       function startDrag(clientX) {
         menuCarouselIsDragging = true;
         menuCarouselHasDragged = false;
@@ -1860,6 +2219,7 @@
         menuCarouselStartX = clientX;
         menuCarouselDragOffset = 0;
         if (viewport) viewport.classList.add('cursor-grabbing');
+        clearInterval(menuCarouselAutoplayTimer);
       }
 
       function moveDrag(clientX) {
@@ -1877,7 +2237,7 @@
         if (!menuCarouselIsDragging) return;
         menuCarouselIsDragging = false;
         if (viewport) viewport.classList.remove('cursor-grabbing');
-        const threshold = 40;
+        const threshold = 35;
         const delta = menuCarouselDragOffset;
         menuCarouselDragOffset = 0;
         if (delta < -threshold) {
@@ -1889,10 +2249,12 @@
         }
         setTimeout(() => {
           window.__menuCarouselDragged = false;
-        }, 80);
+        }, 100);
+        startAutoplay();
       }
 
       if (viewport) {
+        // Desktop mouse events
         viewport.addEventListener('mousedown', (e) => {
           if (e.button !== 0) return;
           startDrag(e.clientX);
@@ -1904,14 +2266,103 @@
           if (menuCarouselIsDragging) endDrag();
         });
 
-        // Touch
+        // Mobile touch swipe handling with direction locking & tactile tracking
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+        let touchDirection = null; // null | 'horizontal' | 'vertical'
+
         viewport.addEventListener('touchstart', (e) => {
-          startDrag(e.touches[0].clientX);
+          if (e.touches.length !== 1) return;
+          const touch = e.touches[0];
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+          touchStartTime = Date.now();
+          touchDirection = null;
+          menuCarouselIsDragging = true;
+          menuCarouselHasDragged = false;
+          window.__menuCarouselDragged = false;
+          menuCarouselStartX = touch.clientX;
+          menuCarouselDragOffset = 0;
+          clearInterval(menuCarouselAutoplayTimer);
         }, { passive: true });
+
         viewport.addEventListener('touchmove', (e) => {
-          if (menuCarouselIsDragging) moveDrag(e.touches[0].clientX);
-        }, { passive: true });
-        viewport.addEventListener('touchend', endDrag);
+          if (!menuCarouselIsDragging || e.touches.length !== 1) return;
+          const touch = e.touches[0];
+          const deltaX = touch.clientX - touchStartX;
+          const deltaY = touch.clientY - touchStartY;
+
+          // Lock direction on initial finger movement
+          if (!touchDirection) {
+            if (Math.abs(deltaX) > 6 || Math.abs(deltaY) > 6) {
+              if (Math.abs(deltaX) >= Math.abs(deltaY)) {
+                touchDirection = 'horizontal';
+              } else {
+                touchDirection = 'vertical';
+                menuCarouselIsDragging = false;
+                startAutoplay();
+                return;
+              }
+            } else {
+              return;
+            }
+          }
+
+          if (touchDirection === 'horizontal') {
+            if (e.cancelable) {
+              e.preventDefault(); // Smooth horizontal swipe without vertical jumping
+            }
+            menuCarouselHasDragged = true;
+            window.__menuCarouselDragged = true;
+            menuCarouselDragOffset = deltaX;
+            updateMenuCarouselPosition(false);
+          }
+        }, { passive: false });
+
+        const finishTouchSwipe = () => {
+          if (!menuCarouselIsDragging) {
+            startAutoplay();
+            return;
+          }
+          menuCarouselIsDragging = false;
+          const deltaX = menuCarouselDragOffset;
+          const elapsed = Math.max(Date.now() - touchStartTime, 1);
+          const velocity = Math.abs(deltaX) / elapsed;
+          menuCarouselDragOffset = 0;
+
+          const isSwipe = (velocity > 0.22 && Math.abs(deltaX) > 15) || Math.abs(deltaX) > 30;
+          if (isSwipe) {
+            if (deltaX < 0) {
+              // User swiped left by hand -> Advance to next cards
+              handleMenuCarouselNext();
+            } else {
+              // User swiped right by hand -> Go back to previous cards
+              handleMenuCarouselPrev();
+            }
+          } else {
+            // Spring back smoothly
+            updateMenuCarouselPosition(true);
+          }
+
+          setTimeout(() => {
+            window.__menuCarouselDragged = false;
+          }, 100);
+
+          // Always resume auto swipe left after user releases touch
+          startAutoplay();
+        };
+
+        viewport.addEventListener('touchend', finishTouchSwipe);
+        viewport.addEventListener('touchcancel', () => {
+          menuCarouselIsDragging = false;
+          menuCarouselDragOffset = 0;
+          updateMenuCarouselPosition(true);
+          setTimeout(() => {
+            window.__menuCarouselDragged = false;
+          }, 100);
+          startAutoplay();
+        });
       }
 
       // Window resize
@@ -1928,7 +2379,7 @@
     function renderGallery() {
       const container = document.getElementById('galleryGrid');
       filteredGalleryItems = currentGalleryCategory === 'tous' 
-        ? GALLERY 
+        ? GALLERY.slice(0, 6) 
         : GALLERY.filter(item => item.category === currentGalleryCategory);
 
       container.innerHTML = filteredGalleryItems.map((item, index) => `
@@ -2126,38 +2577,78 @@
         });
       });
 
-      // Desktop Center Dropdown Menu
-      const desktopBtn = document.getElementById('desktopMenuToggleBtn');
-      const desktopDropdown = document.getElementById('desktopDropdown');
-      const chevron = document.getElementById('desktopMenuChevron');
+      // Services Dropdown
+      const servicesBtn = document.getElementById('navServicesBtn');
+      const servicesDropdown = document.getElementById('navServicesDropdown');
+      const servicesChevron = document.getElementById('navServicesChevron');
+      if (servicesBtn && servicesDropdown) {
+        servicesBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = servicesDropdown.classList.contains('hidden');
+          if (isHidden) {
+            servicesDropdown.classList.remove('hidden');
+            if (servicesChevron) servicesChevron.classList.add('rotate-180');
+          } else {
+            servicesDropdown.classList.add('hidden');
+            if (servicesChevron) servicesChevron.classList.remove('rotate-180');
+          }
+        });
 
-      desktopBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isHidden = desktopDropdown.classList.contains('hidden');
-        if (isHidden) {
-          desktopDropdown.classList.remove('hidden');
-          chevron.classList.add('rotate-180');
-          desktopBtn.classList.add('bg-[#0D4035]', 'text-[#D4AF37]');
-        } else {
-          desktopDropdown.classList.add('hidden');
-          chevron.classList.remove('rotate-180');
-          desktopBtn.classList.remove('bg-[#0D4035]', 'text-[#D4AF37]');
+        document.addEventListener('click', (e) => {
+          if (!servicesDropdown.contains(e.target) && !servicesBtn.contains(e.target)) {
+            servicesDropdown.classList.add('hidden');
+            if (servicesChevron) servicesChevron.classList.remove('rotate-180');
+          }
+        });
+      }
+
+      // Dark Mode / Night Ambiance Toggle with persistence
+      window.isDarkMode = false;
+      try {
+        const savedTheme = localStorage.getItem('mds_theme');
+        if (savedTheme === 'dark') {
+          window.isDarkMode = true;
+          document.body.classList.add('night-mode');
         }
-      });
+      } catch (e) {}
 
-      document.addEventListener('click', (e) => {
-        if (!desktopDropdown.contains(e.target) && !desktopBtn.contains(e.target)) {
-          desktopDropdown.classList.add('hidden');
-          chevron.classList.remove('rotate-180');
-          desktopBtn.classList.remove('bg-[#0D4035]', 'text-[#D4AF37]');
-        }
-      });
+      function syncMoonIcons() {
+        const moonIcons = document.querySelectorAll('#themeMoonIcon, [data-lucide="moon"]');
+        moonIcons.forEach(icon => {
+          if (window.isDarkMode) {
+            icon.classList.add('text-[#CBA64B]');
+          } else {
+            icon.classList.remove('text-[#CBA64B]');
+          }
+        });
+        const toggleBtns = document.querySelectorAll('#themeToggleBtn, #mobileThemeToggleBtn');
+        toggleBtns.forEach(btn => {
+          btn.setAttribute('title', window.isDarkMode ? 'Mode jour' : 'Mode nuit');
+          btn.setAttribute('aria-label', window.isDarkMode ? 'Activer le mode jour' : 'Activer le mode nuit');
+        });
+      }
 
-      document.querySelectorAll('.desktop-drop-link').forEach(link => {
-        link.addEventListener('click', () => {
-          desktopDropdown.classList.add('hidden');
-          chevron.classList.remove('rotate-180');
-          desktopBtn.classList.remove('bg-[#0D4035]', 'text-[#D4AF37]');
+      syncMoonIcons();
+
+      window.toggleThemeMode = function() {
+        window.isDarkMode = !window.isDarkMode;
+        document.body.classList.toggle('night-mode', window.isDarkMode);
+        try {
+          localStorage.setItem('mds_theme', window.isDarkMode ? 'dark' : 'light');
+        } catch (e) {}
+
+        syncMoonIcons();
+      };
+
+      // Active Nav Link highlighting on click
+      document.querySelectorAll('.nav-link-item').forEach(link => {
+        link.addEventListener('click', function() {
+          document.querySelectorAll('.nav-link-item').forEach(l => {
+            l.classList.remove('text-[#CBA64B]');
+            l.classList.add('text-[#35312C]');
+          });
+          this.classList.remove('text-[#35312C]');
+          this.classList.add('text-[#CBA64B]');
         });
       });
     });
